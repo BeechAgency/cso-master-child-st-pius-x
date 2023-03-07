@@ -189,29 +189,6 @@ class CSO_Child_Theme_Updater {
         return $transient; // Return filtered transient
     }
 
-    /*
-	public function rename_package_upon_download_filter( $source, $remote_source=NULL, $upgrader=NULL ) {
-        $slug = $this->theme;
-        $repo = null;
-        
-        $upgrader_object = null;
-        $remote_source = $wp_filesystem->wp_content_dir() . 'upgrade/';
-        $new_source =  trailingslashit( $remote_source ) . $slug;
-		*/
-        /*
-        if(  strpos( $source, $this->theme ) === false )
-            return $source;
-
-        
-        $path_parts = pathinfo($source);
-       
-
-        $corrected_source = $path_parts['dirname'].'/'. self::$repo_slug .'/';
-        *//*
-        rename( $source, $corrected_source );
-
-		return trailingslashit( $new_source );
-	}*/
 
 	public function rename_package_upon_download( $source, $remote_source=NULL, $upgrader=NULL ) {		
 		if( isset($_GET['action'] ) && stristr( $_GET['action'], 'theme' ) ) {
@@ -271,16 +248,11 @@ class CSO_Child_Theme_Updater {
   
 $updater = new CSO_Child_Theme_Updater( __FILE__ );
 
-//$updater->authorize('');
 $updater->set_username( 'BeechAgency' );
-$updater->set_repository( 'cso-master-child-all-saints' );
-$updater->set_theme('cso-master-child-all-saints'); 
+$updater->set_repository( 'cso-master-child-st-pius-x' );
+$updater->set_theme('cso-master-child-st-pius-x'); 
 
 $updater->initialize();
-  
-//var_dump( get_theme_root() );
-//var_dump(wp_get_theme()->get_theme_root_uri() );
-//var_dump( get_stylesheet() === 'cso-master-child-all-saints' );
 
 function console_log($output, $with_script_tags = true) {
     $js_code = 'console.log("DEBUG ON"); console.log(' . json_encode($output, JSON_HEX_TAG) . 

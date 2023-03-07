@@ -1,7 +1,7 @@
-All Saints College, Maitland Theme
+St Pius X, Adamstown Theme
 ===
 
-CSO Master child theme for All Saints College. Changes the fonts, colours and school style of the site to be in line with the All Saints' brand.
+CSO Master child theme for St Pius X, Adamstown. Changes the fonts, colours and school style of the site to be in line with the St Pius X's brand.
 
 About
 ---------------
