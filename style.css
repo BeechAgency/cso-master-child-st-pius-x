@@ -101,6 +101,7 @@ a:has(.logo):hover {
 }
 .open .mega-menu-header:after {
 	margin-left: 6rem;
+	width: calc(100% - 6rem);
 }
 .mega-menu-header {
 	margin-bottom: 4rem;
